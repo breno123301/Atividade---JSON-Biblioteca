@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Filmes</title>
+</head>
+
+<body>
+
+    <h1>Cadastre os livros</h1>
+
+    <form method="POST">
+
+        <label>Titulo</label><br>
+        <input type="text" name="nome" required>
+
+        <br><br>
+
+        <label>Autor</label><br>
+        <input type="text" name="genero" required>
+
+        <br><br>
+
+        <label>Ano de publicação</label><br>
+        <input type="number" name="ano" required>
+
+        <br><br>
+
+        <label>Categoria</label><br>
+        <input type="number" name="ano" required>
+
+        <br><br>
+
+        <label>Quantidade de exemplares</label><br>
+        <input type="number" name="ano" required>
+
+        <button type="submit">
+            Cadastrar
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="{{ url_for('listar') }}">
+        Ver Filmes Cadastrados
+    </a>
+
+</body>
+
+</html>

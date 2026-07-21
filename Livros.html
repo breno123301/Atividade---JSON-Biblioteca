@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Filmes</title>
+</head>
+
+<body>
+
+    <h1>Livros Cadastrados</h1>
+
+    {% if livros %}
+
+        {% for livros in livros %}
+
+            <h2>{{ livros.nome }}</h2>
+
+            <p><strong>Gênero:</strong> {{ livros.genero }}</p>
+
+            <p><strong>Ano:</strong> {{ livros.ano }}</p>
+
+            <hr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h2>Nenhum livros cadastrado.</h2>
+
+    {% endif %}
+
+    <br>
+
+    <a href="{{ url_for('cadastro') }}">
+        Cadastrar Novo livros
+    </a>
+
+</body>
+
+</html>
